@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Copy dotfiles
-./copy.sh
-
 # Update Ubuntu and get standard repository programs
 sudo apt update && sudo apt full-upgrade -y
 
@@ -29,6 +26,10 @@ install tig
 install zsh
 install fonts-powerline
 
+#ssh keygen
+install xclip
+
+
 # to make zsh default shell
 chsh -s $(which zsh) $(whoami) 
 
@@ -38,6 +39,12 @@ for f in zsh/*.sh; do bash "$f" -H; done
 # Fun stuff
 install figlet
 install lolcat
+
+# creating development folders 
+./create_dev_folders.sh
+
+# creating symlinks
+./symlinks.sh
 
 # Run all scripts in programs/
 for f in programs/*.sh; do bash "$f" -H; done
