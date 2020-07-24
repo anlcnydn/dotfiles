@@ -25,6 +25,7 @@ install tig
 # zsh
 install zsh
 install fonts-powerline
+install zsh-syntax-highlighting
 
 #ssh keygen
 install xclip
