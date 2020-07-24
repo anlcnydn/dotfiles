@@ -1,5 +1,8 @@
 #!/bin/bash
 
+REPO_PATH=$(pwd)
+DOTFILES_PATH="${REPO_PATH}/ubuntu"
+
 echo "Creating symlinks..."
 
-ln -sv ~/Development/dotfiles/ubuntu/.zshrc ~
+ln -sv "${DOTFILES_PATH}/.zshrc" ~
