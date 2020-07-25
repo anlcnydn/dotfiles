@@ -1,0 +1,15 @@
+[user]
+	email = anlcnydn@gmail.com
+	name = Anil Can Aydin
+[core]
+	editor = vim
+    excludesfile = /home/anil/.gitignore_global
+[alias]
+    st = status
+    sth = stash
+    sthp = stash pop
+    ci = commit
+    br = branch
+    co = checkout
+    cob = checkout -b
+

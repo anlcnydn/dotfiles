@@ -21,3 +21,7 @@ Personal dot files for ubuntu.
    $ ls
    dotfiles
    ```
+4. Run the install.sh from root:
+   ```
+   $ ./ubuntu/scripts/install.sh
+   ```
