@@ -13,6 +13,7 @@ function install {
   if [ $? -ne 0 ]; then
     echo "Installing: ${1}..."
     sudo apt install -y $1
+    echo "Installed successfully: ${1}!"
   else
     echo "Already installed: ${1}"
   fi
@@ -34,6 +35,16 @@ install zsh-syntax-highlighting
 #ssh keygen
 install xclip
 
+# java 
+install default-jdk
+
+# maven 
+install maven
+
+# python stuff 
+install python3-venv 
+install python3-pip
+
 
 # to make zsh default shell
 chsh -s $(which zsh) $(whoami) 
@@ -52,8 +63,11 @@ install lolcat
 # creating symlinks
 ./${SCRIPTS_PATH}/symlinks.sh
 
-# Run all scripts in programs/
-# for f in programs/*.sh; do bash "$f" -H; done
+# install snaps for desktop applications
+./${SCRIPTS_PATH}/desktop/desktop_install.sh
+
+# Run all scripts in development/
+for f in "${SCRIPTS_PATH}/development"/*.sh; do bash "$f" -H; done
 
 # Get all upgrades
 sudo apt upgrade -y
