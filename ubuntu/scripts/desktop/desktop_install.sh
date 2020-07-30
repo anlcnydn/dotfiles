@@ -28,6 +28,7 @@ install_snap skype
 
 install_snap slack
 
+install_snap postman
 
 # google chrome
 
