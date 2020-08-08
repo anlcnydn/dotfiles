@@ -80,6 +80,10 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # User configuration
 export EDITOR=vim
 
+
+# Scaleway autocomplete tool 
+eval "$(scw autocomplete script shell=zsh)"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
