@@ -84,6 +84,8 @@ export EDITOR=vim
 # Scaleway autocomplete tool 
 eval "$(scw autocomplete script shell=zsh)"
 
+eval "$(direnv hook zsh)"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -107,5 +109,3 @@ eval "$(scw autocomplete script shell=zsh)"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias docker="sudo docker"
