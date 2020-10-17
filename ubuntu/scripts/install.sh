@@ -60,14 +60,15 @@ install lolcat
 # creating development folders 
 bash "${SCRIPTS_PATH}/create_dev_folders.sh"
 
-# creating symlinks
-bash "${SCRIPTS_PATH}/symlinks.sh"
 
 # install snaps for desktop applications
 bash "${SCRIPTS_PATH}/desktop/desktop_install.sh"
 
 # Run all scripts in development/
 for f in "${SCRIPTS_PATH}/development"/*.sh; do bash "$f" -H; done
+
+# creating symlinks
+bash "${SCRIPTS_PATH}/symlinks.sh"
 
 # Get all upgrades
 sudo apt upgrade -y
