@@ -13,3 +13,5 @@
     co = checkout
     cob = checkout -b
 
+[push]
+    followTags = true
